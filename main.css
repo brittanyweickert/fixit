@@ -1,0 +1,92 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/bg2.jpg) no-repeat center fixed;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+    color: white;
+    font-family: 'Nunito', sans-serif;;
+    text-align: center;
+    height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main Input */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+}
+
+.main-input { 
+    text-align: center;
+    letter-spacing: 4px;
+    color: white;
+    text-transform: uppercase;
+    transform: translate(-5%);
+    transition: all 500ms ease;
+}
+
+.header {
+    font-size: 50px;
+    animation: showHeader 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.subheader {
+    font-size: 30px;
+    animation: showSubHeader 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+input {
+    border: none;
+    border-bottom: 3px solid white;
+    border-radius: 0px;
+    padding: 10px 0;
+    color: white;
+    font-size: 50px;
+    background: none;
+    width: 600px; 
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+button {
+    border: 2px;
+    padding: 10px 15px;
+    color: white;
+    position: relative;
+    left: -5px;
+    border-radius: 5px;
+    background: #db818140;
+    font-size: 50px;
+    transition: color 0.25s linear;
+}
+
+/*Animations*/ 
+
+@keyframes showHeader {
+    0%{transform: translateY(30%); opacity:0;}
+    100%{transform: translateY(0%); opacity: 1;}
+}
+
+@keyframes showSubHeader {
+    0%{transform: translateX(10%); opacity:0;}
+    100%{transform: translateY(0%); opacity: 1;}
+}
+
+/*Responsiveness*/
