@@ -1,62 +1,121 @@
-* {
-    margin: 0%;
-    box-sizing: border-box;
-    background-color: black;
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400|Muli:300,700');
+
+*       {margin: 0%; box-sizing: border-box; position: relative; vertical-align: middle;}
+html    {scroll-behavior: smooth;}
+
+/* Text Styles */
+
+h1, h2, h3 {
+    font-family: 'Old Standard TT', serif;
+    line-height: 1.1;
 }
 
-body {
-    background: url(images/bg2.jpg) no-repeat center fixed;
+h2 {
+    color: black;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+h1 {
+    z-index: 2;
+    margin: 0 0 1rem;
+    width: 100%;
+    font-size: 4rem;
+    font-weight: 900;
+    color: black;
+}
+
+h3 {
+    color: black;
+    font-size: 2rem;
+    margin: 0 0 2rem;
+}
+
+/*Header*/
+
+header {
+    background: url(images/bg7.jpg) center center no-repeat fixed;
     background-size: cover;
-    background-attachment: scroll;
-    position: relative;
-    color: white;
-    font-family: 'Nunito', sans-serif;;
-    text-align: center;
     height: 100vh;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Main Input */
-.main {
-    display: flex;
-    flex-direction: column;
+    align-content: center;
     align-items: center;
-    max-width: 100%;
-    text-align: center;
-}
-
-.main-input { 
-    text-align: center;
-    letter-spacing: 4px;
-    color: white;
-    text-transform: uppercase;
-    transform: translate(-5%);
-    transition: all 500ms ease;
+    justify-content: center;
 }
 
 .header {
-    font-size: 50px;
     animation: showHeader 2s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
 
 .subheader {
-    font-size: 30px;
     animation: showSubHeader 2.5s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
 
+/*Main*/
+
+.container {
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 80rem;
+    width: 100%;
+    height: 100vh;
+}
+
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: black;
+  background: white;
+  text-rendering: optimizeLegibility;
+}
+
+.image-block {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.ex-btn {
+  display: inline-block;
+  color: black;
+  border: none;
+  border-radius: 0;
+  outline: 0;
+  padding: 1.25rem 2rem;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+.info {
+  margin: 1rem 0;
+}
+
+section {
+  padding: 4rem 0;
+}
+
 input {
     border: none;
-    border-bottom: 3px solid white;
+    border-bottom: 4px solid black;
     border-radius: 0px;
     padding: 10px 0;
-    color: white;
+    color: black;
     font-size: 50px;
     background: none;
     width: 600px; 
@@ -69,13 +128,15 @@ input:focus, textarea:focus, select:focus {
 button {
     border: 2px;
     padding: 10px 15px;
-    color: white;
-    position: relative;
+    color: black;
     left: -5px;
     border-radius: 5px;
-    background: #db818140;
+    background: #3a393940;
     font-size: 50px;
     transition: color 0.25s linear;
+} ::placeholder {
+    color: black;
+    font-weight: 400;
 }
 
 /*Animations*/ 
