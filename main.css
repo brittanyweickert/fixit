@@ -66,14 +66,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.container {
-    margin: auto;
-    padding: 0 1rem;
-    max-width: 80rem;
-    width: 100%;
-    height: 100vh;
-}
-
 .image-block {
     position: absolute;
     z-index: 1;
@@ -93,13 +85,11 @@ input {
     font-size: 50px;
     background: none;
     width: 600px; 
-}
-
-input:focus, textarea:focus, select:focus {
+} input:focus, textarea:focus, select:focus {
     outline: none;
 }
 
-button {
+.submitButton {
     border: 2px;
     padding: 10px 15px;
     color: white;
@@ -129,6 +119,46 @@ button {
 
 section {
   padding: 4rem 0;
+}
+
+/* Grid */
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "footer footer footer footer";
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 80rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.container2 {
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 80rem;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-items: stretch;
+}
+
+/* Footer */
+#footer .copyright {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-size: 0.5rem;
+    opacity: 0.75;
+    text-transform: uppercase;
+    color: black;
+} #footer a {
+    color: black;
 }
 
 /*Animations*/ 

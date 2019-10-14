@@ -65,4 +65,3 @@ function displayYouTubeResults(responseJson) {
 }
 
 // This will be the section for locations API
-
