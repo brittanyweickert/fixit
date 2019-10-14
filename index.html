@@ -11,24 +11,32 @@
 </head>
 <body>
     <div class="main" id="section1">
-    <article class="main-input">
-        <h1 class="header">Broke it? Let's Fix it.</h1>
-        <h2 class="subheader">What are my options?</h2>
-    </article>
-    <form id="input">
-        <input id="searchfield" type="text" name="searchfield" placeholder="Type what needs fixing here." autofocus required spellcheck="true">
-        <button id="fix-it">FIX IT</button> 
-    </form>
-    <a href="#section2"><h2 class="example_search">example<i class="" aria-hidden="true"></i></h2></a>
-    </section>
+        <article class="main-input">
+            <h1 class="header">Broke it? Let's Fix it.</h1>
+            <h2 class="subheader">What are my options?</h2>
+        </article>
+        <form id="search-videos">
+            <input id="videos-search-field" type="text" name="searchfield" placeholder="Type what needs fixing here." autofocus required spellcheck="true">
+            <button id="fix-it">FIX IT</button> 
+        </form>
+        <a href="#section2"><h2 class="example_search">example<i class="" aria-hidden="true"></i></h2></a>
+    </div>
 
     <div class="main" id="section2">
-
+        <section id="video-results">
+            <ul id="videos-list">             
+            </ul>
+        </section>
 
 
         
 
-    </section>
-<script src="main.js"></script>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>    
+    <script src="main.js"></script>
 </body>
 </html>
