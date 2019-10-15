@@ -60,7 +60,7 @@ body {
     margin: 0;
     padding: 0;
     color: black;
-    background: white;
+    background: #9a9a9a;
 }
 
 input {
@@ -130,6 +130,7 @@ input {
 
 .wrapper {
     display: grid;
+    grid-gap: 15px;
     grid-template-areas: 
         "header header header"
         "videos mapData meme"
@@ -139,9 +140,10 @@ input {
 }
 
 .box {
-    background-color: #fff;
-    color: #fff;
+    background-color: rgb(233, 230, 230);
+    color: black;
     padding: 1.3rem;
+    box-shadow: 1px 1px 5px #777777;
 }
 /* Animations */
 
