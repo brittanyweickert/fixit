@@ -82,6 +82,7 @@ fetch(fourSquareURL).then(res => {
     }
 })
 .then(res => {
+    console.log(res)
     displayMap(res);
 })
 .catch(err => {
@@ -91,12 +92,11 @@ fetch(fourSquareURL).then(res => {
 
 function displayMap(mapData) {
     $('.info-holder').empty();
-    for (let i = 0; i < mapData.items.length; i++) {
-        $('#videos-list').append(
+    for (let i = 0; i < mapData.groups.items.length; i++) {
+        $('.info-holder').append(
             `<li>
-                <h3>${responseJson.items[i].snippet.title}</h3>
-                <p>${responseJson.items[i].snippet.description}</p>
-                <img src='${responseJson.items[i].snippet.thumbnails.default.url}'
+                <h3>${mapData.groups.items[i].venue.name}</h3>
+                <p>${mapData.groups.items[i].venue.location}</p>            
             </li>
             `
         )
