@@ -11,9 +11,13 @@ function handleFormSubmit() {
         let searchTerm = $('#videos-search-field').val() + 'repair';
         // if we want to set a limit later on
         let maxResults = 10;
+        // When we get zipcode from form
+        let zip = 33610;
+
 
         if (searchTerm !== '') {
             getYouTubeVideos(searchTerm, maxResults);
+            getMapData(zip);
         } else {
             alert('please enter a repair you would like to learn about');
         }
@@ -48,7 +52,6 @@ function getYouTubeVideos(searchTerm, resultsMax = 10) {
 }
 
 function displayYouTubeResults(responseJson) {
-    console.log(responseJson)
     $('#videos-list').empty();
     for (let i = 0; i < responseJson.items.length; i++) {
         $('#videos-list').append(
@@ -61,7 +64,43 @@ function displayYouTubeResults(responseJson) {
         )
     }
 
-    $('#results').removeClass('hidden');
+    $('#videos-list').removeClass('hidden');
 }
 
 // This will be the section for locations API
+
+const clientID = 'YMBYSODCXL3DCEIJGJIW2N5EGME0O10PVDF2A41Z1MIP0KZD';
+const clientSecret = 'LIWLXKL0O1ASSEMUWFC15SUTCU4WK1PJXBNLUHTRCJQW5BWW';
+const fourSquareURL = `https://api.foursquare.com/v2/venues/explore?client_id=${clientID}&client_secret=${clientSecret}&v=20180323&limit=5&ll=40.7243,-74.0018&query=coffee`
+
+function getMapData() {
+fetch(fourSquareURL).then(res => {
+    if (res.ok) {
+        return res.json();
+    } else {
+        throw new Error(res.statusText);
+    }
+})
+.then(res => {
+    displayMap(res);
+})
+.catch(err => {
+    console.log(err.statusText)
+});
+}
+
+function displayMap(mapData) {
+    $('.info-holder').empty();
+    for (let i = 0; i < mapData.items.length; i++) {
+        $('#videos-list').append(
+            `<li>
+                <h3>${responseJson.items[i].snippet.title}</h3>
+                <p>${responseJson.items[i].snippet.description}</p>
+                <img src='${responseJson.items[i].snippet.thumbnails.default.url}'
+            </li>
+            `
+        )
+    }
+
+    $('#videos-list').removeClass('hidden');
+}
