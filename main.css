@@ -50,7 +50,7 @@ h3 {
     margin: 0 0 2rem;
 }
 
-/* Styles */
+/* Main Styles */
 
 body {
     font-family: 'Lato', sans-serif; 
@@ -68,15 +68,12 @@ input {
 	outline: none;
 	border: 3px rgba(206, 71, 58, 0.5) solid;
 	border-radius: 10px;
-	background-color: rgba(28, 28, 31, 0.2);
-	color: black;
+	background-color: rgba(47, 47, 51, 0.2);
 	padding: 12px 100px 12px 20px;
 	font-size: 25px;
 	max-width: 300px;
-}
-
-#search-term input {
-	color: whitesmoke;
+} input::placeholder {
+    color: rgba(206, 198, 197, 0.705);
 }
 
 .submitButton {
@@ -89,21 +86,16 @@ input {
 	font-size: 25px;
 }
 
-.ex-btn {
-  display: inline-block;
-  color: white;
-  border: none;
-  border-radius: 0;
-  outline: 0;
-  padding: 1.25rem 2rem;
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-}
+/* Video Styles */
+
+
+
+/* mapData Styles */
+
+
 
 /* Footer */
+
 .footer .copyright {
     position: fixed;
     left: 0;
@@ -124,18 +116,16 @@ input {
 .header     {grid-area: header;}
 .footer     {grid-area: footer;}
 .mapData    {grid-area: mapData;}
-.meme       {grid-area: meme;}
 .videos     {grid-area: videos;}
 
 .wrapper {
     display: grid;
-    grid-gap: 15px;
     grid-template-areas: 
         "header header header"
-        "videos mapData meme"
+        "videos videos mapData"
         "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100vh 85% 10px;
+    grid-template-rows: 100vh 80% 5%;
 }
 
 .box {
@@ -144,6 +134,16 @@ input {
     padding: 1.3rem;
     box-shadow: 1px 1px 5px #777777;
 }
+
+.footer {
+height: 8px;
+background-color: rgba(47, 47, 51, 0.2);;
+}
+
+.videos, .mapData {
+    margin: 15px 20px 10px 20px;
+}
+
 /* Animations */
 
 @keyframes showHeadLine {
@@ -162,7 +162,6 @@ input {
     .wrapper {
         grid-template-areas:
         "header"
-        "meme"
         "mapData"
         "videos"
         "footer";
