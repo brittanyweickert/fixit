@@ -12,76 +12,34 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <section class="grid intro">
-                <div class="column-xs-12 column-md-4">
-                    <div class="intro">
-                        <h1 class="header">Oh crap, I broke it.</h1>
-                        <h2 class="subheader">What options do I have?</h2>
-                    </div>
-                </div>
-                <div class="column-xs-12 column-md-8">
-                    <div class="">
-                        <form id="search-videos">
-                            <input id="videos-search-field" type="text" name="searchfield" placeholder="what's broken?"
-                                autofocus required spellcheck="true">
-                            <input type="submit" class="submitButton">
-                        </form>
-                        <a class="ex-btn" href="#geolocation">example</h2></a>
-                    </div>
-                </div>
-            </section>
+    <div class="wrapper">
+        <div class="box header">
+            <h1 class="headLine">Oh crap, it broke.</h1>
+            <h2 class="subHeadLine">What are my options?</h2>
+            <form id="search-videos">
+                <input id="videos-search-field" type="text" name="searchfield" placeholder="what's broken?" autofocus required spellcheck="true">
+                <input type="submit" class="submitButton" href="#videos-list">
+            </form>
+            <a class="ex-btn" href="#videos-list">example</h2></a>
+            </div>
+        <div class="box geolocation">
+            <h3>Local Repair Shops</h3>
+            <div id="info-holder"></div>
         </div>
-    </header>
-    <main>
-        <div class="container">
-            <section id="geolocation" class="grid">
-                <div class="column-xs-12 column-md-6">
-                    <div class="info-holder">
-                        <h3>LOCAL REPAIR <i class="icon ion-md-pin"></i></h3>
-                        <p>
-                            orem um dolor sit amet, consectetur adipiscing elit. Maecenas dapibus arcu mi. Praesent
-                            placerat
-                            dolor id elit auctor pretium. Etiam condimentum velit ac libero rhoncus hendrerit.
-                            Suspendisse
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section id="ytVideos" class="grid">
-                <div class="column-xs-12 column-md-6">
-                    <div class="video-holder">
-                        <h3>WATCH <i class="icon ion-logo-youtube"></i></h3>
-
-                        <div id="videos-list"></div>
-
-
-
-                    </div>
-                </div>
-            </section>
-            <section id="meme" class="grid">
-                <div class="column-xs-8 column-md-4">
-                    <div class="meme-holder">
-                        <h3>Funny Fix It meme go here?</h3>
-                        <img src="images/meme.jpg" alt="funnymeme">
-                    </div>
-                </div>
-            </section>
+        <div class="box videos">
+            <h3>Watch</h3>
+            <div id="videos-list"></div>
         </div>
-    </main>
-
-
-    <footer id="footer">
-        <p class="copyright">Design: <a href="https://brittanyweickert.dev" target="_blank">BRITTANY WEICKERT</a> & <a
-                href="https://r-kadel.github.io/Portfolio/" target="_blank">RYAN KADEL</a>. Image: <a
-                href="https://unsplash.com/">UPSPLASH</a></p>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-        </script>
-    <script src="main.js"></script>
+        <div class="box meme">
+            
+        </div>
+        <div class="box footer">
+            <p class="copyright">Design: <a href="https://brittanyweickert.dev" target="_blank">BRITTANY WEICKERT</a> & <a
+            href="https://r-kadel.github.io/Portfolio/" target="_blank">RYAN KADEL</a>. Image: <a
+            href="https://unsplash.com/">UPSPLASH</a></p
+        ></div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
-
 </html>

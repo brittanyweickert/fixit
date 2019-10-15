@@ -10,7 +10,7 @@ function handleFormSubmit() {
         e.preventDefault();
         let searchTerm = $('#videos-search-field').val() + 'repair';
         // if we want to set a limit later on
-        let maxResults = 10;
+        let maxResults = 2;
         // When we get zipcode from form
         let zip = 33610;
 
@@ -91,9 +91,9 @@ fetch(fourSquareURL).then(res => {
 }
 
 function displayMap(mapData) {
-    $('.info-holder').empty();
+    $('#info-holder').empty();
     for (let i = 0; i < mapData.groups.items.length; i++) {
-        $('.info-holder').append(
+        $('#info-holder').append(
             `<li>
                 <h3>${mapData.groups.items[i].venue.name}</h3>
                 <p>${mapData.groups.items[i].venue.location}</p>            
@@ -102,5 +102,5 @@ function displayMap(mapData) {
         )
     }
 
-    $('#videos-list').removeClass('hidden');
+    $('#info-holder').removeClass('hidden');
 }
