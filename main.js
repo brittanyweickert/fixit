@@ -10,7 +10,7 @@ function handleFormSubmit() {
         e.preventDefault();
         let searchTerm = $('#videos-search-field').val() + 'repair';
         // if we want to set a limit later on
-        let maxResults = 2;
+        let maxResults = 4;
         // When we get zipcode from form
         let zip = 33610;
 

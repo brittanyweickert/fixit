@@ -63,31 +63,30 @@ body {
     background: #9a9a9a;
 }
 
+
 input {
-    border: none;
-    border-bottom: 4px solid #3a393940;
-    border-radius: 0px;
-    padding: 10px 0;
-    color: white;
-    font-size: 45px;
-    background: none;
-    width: 300px; 
-} input:focus, textarea:focus, select:focus {
-    outline: none;
+	outline: none;
+	border: 3px rgba(206, 71, 58, 0.5) solid;
+	border-radius: 10px;
+	background-color: rgba(28, 28, 31, 0.2);
+	color: black;
+	padding: 12px 100px 12px 20px;
+	font-size: 25px;
+	max-width: 300px;
+}
+
+#search-term input {
+	color: whitesmoke;
 }
 
 .submitButton {
-    border: 2px;
-    padding: 10px 15px;
-    color: white;
-    left: -5px;
-    border-radius: 5px;
-    background: #3a393940;
-    font-size: 45px;
-    transition: color 0.25s linear;
-} ::placeholder {
-    color: rgb(219, 60, 11);
-    font-weight: 300;
+	color: whitesmoke;
+	border: 3px solid rgba(206, 71, 58, 0.5);
+	border-radius: 10px;
+	background-color: rgba(206, 71, 58, 0.5);
+	padding: 10px 15px;
+	outline: none;
+	font-size: 25px;
 }
 
 .ex-btn {

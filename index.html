@@ -17,7 +17,8 @@
             <h1 class="headLine">Oh crap, it broke.</h1>
             <h2 class="subHeadLine">What are my options?</h2>
             <form id="search-videos">
-                <input id="videos-search-field" type="text" name="searchfield" placeholder="what's broken?" autofocus required spellcheck="true">
+                <input id="videos-search-field" type="text" name="searchfield" placeholder="Appliance name" autofocus required spellcheck="true">
+                <input id="zip" name="zip" type="text" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" title="please enter a zipcode" placeholder="Zipcode" required>
                 <input type="submit" class="submitButton" href="#videos-list">
             </form>
             <a class="ex-btn" href="#videos-list">example</h2></a>
