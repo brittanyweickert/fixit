@@ -78,8 +78,6 @@ function displayYouTubeResults(responseJson) {
             `
         )
     }
-
-    $('#videos-list').removeClass('hidden');
 }
 
 
@@ -126,7 +124,6 @@ function getMapData(coords) {
         }
     })
     .then(res => {
-        console.log(res)
         initMap(res, loc)
         })
     .catch(err => {
@@ -153,6 +150,22 @@ function initMap(venues, start) {
             map: map,
             title: label
         });
+    }
+    displayResultsInfo(venues);
+}
+
+
+function displayResultsInfo(venues) {
+    $('#map-info-list').empty();
+    for (let i = 0; i < venues.response.groups[0].items.length; i++) {
+        let shortPath = venues.response.groups[0].items[i].venue;
+        let addressInfo = shortPath.location.formattedAddress[0] + ', ' + shortPath.location.formattedAddress[1] + ', ' + shortPath.location.formattedAddress[2]
+
+        $('#map-info-list').append( `<li>
+                <h4>${shortPath.name}</h4>               
+                <p>${addressInfo}</p>
+            </li>
+        `)
     }
 }
 
