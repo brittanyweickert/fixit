@@ -70,7 +70,7 @@ body {
 
 input {
 	outline: none;
-	border: 3px rgba(206, 71, 58, 0.5) solid;
+	border: 3px #7863AE solid;
 	border-radius: 10px;
 	background-color: rgba(47, 47, 51, 0.2);
 	padding: 12px 100px 12px 20px;
@@ -82,9 +82,9 @@ input {
 
 .submitButton {
 	color: whitesmoke;
-	border: 3px solid rgba(206, 71, 58, 0.5);
+	border: 3px solid #7863AE;
 	border-radius: 10px;
-	background-color: rgba(206, 71, 58, 0.5);
+	background-color: #7863AE;
 	padding: 10px 15px;
 	outline: none;
 	font-size: 25px;
@@ -94,7 +94,7 @@ input {
 
 
 
-/* mapData Styles */
+/* map Styles */
 
 
 
@@ -119,14 +119,14 @@ input {
 
 .header     {grid-area: header;}
 .footer     {grid-area: footer;}
-.mapData    {grid-area: mapData;}
+.map        {grid-area: map;}
 .videos     {grid-area: videos;}
 
 .wrapper {
     display: grid;
     grid-template-areas: 
         "header header header"
-        "videos videos mapData"
+        "videos videos map"
         "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100vh 80% 5%;
@@ -144,7 +144,7 @@ height: 8px;
 background-color: rgba(47, 47, 51, 0.2);;
 }
 
-.videos, .mapData {
+.videos, .map {
     margin: 15px 20px 10px 20px;
 }
 
@@ -166,7 +166,7 @@ background-color: rgba(47, 47, 51, 0.2);;
     .wrapper {
         grid-template-areas:
         "header"
-        "mapData"
+        "map"
         "videos"
         "footer";
         grid-template-columns: 100%;
@@ -183,11 +183,3 @@ background-color: rgba(47, 47, 51, 0.2);;
         font-size: 12px;
     }
 }
-
-/* map style */
-.map{
-    height: 300px;
-}
-#map {
-    height: 100%;
-  }
