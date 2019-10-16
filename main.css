@@ -140,10 +140,15 @@ input {
 .footer {
 height: 8px;
 background-color: rgba(47, 47, 51, 0.2);;
+padding: 8px;
 }
 
 .videos, .map {
     margin: 15px 20px 10px 20px;
+}
+
+.header {
+    padding: 100px;
 }
 
 /* Animations */
