@@ -9,21 +9,19 @@ function handleFormSubmit() {
     $('#search-videos').on('submit', e => {
         e.preventDefault();
         let searchTerm = $('#videos-search-field').val() + 'repair';
-        // if we want to set a limit later on
-        let maxResults = 4;
-        
+        const maxResults = 4;       
         let zip = $('#zip').val();
 
         if (searchTerm !== '') {
             getYouTubeVideos(searchTerm, maxResults);
             getLatLong(zip);            
         } else {
-            alert('please enter a repair you would like to learn about');
+            alert('Please enter your phone model');
         }
     })
 }
 
-function getYouTubeVideos(searchTerm, resultsMax = 10) {
+function getYouTubeVideos(searchTerm, resultsMax) {
     const apiKey = 'AIzaSyDDgzOdf_q3pwdLbEi8geqdP4avXz2X3lM';
     const youTubeApiUrl = 'https://www.googleapis.com/youtube/v3/search';
     const params = {
