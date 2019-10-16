@@ -12,9 +12,11 @@ function handleFormSubmit() {
         // if we want to set a limit later on
         let maxResults = 4;
         
+        let zip = $('#zip').val();
+
         if (searchTerm !== '') {
             getYouTubeVideos(searchTerm, maxResults);
-            getMapData();
+            getLatLong(zip);            
         } else {
             alert('please enter a repair you would like to learn about');
         }
@@ -50,7 +52,6 @@ function getYouTubeVideos(searchTerm, resultsMax = 10) {
 
 function displayYouTubeResults(responseJson) {
     $('#videos-list').empty();
-    console.log(responseJson);
     for (let i = 0; i < responseJson.items.length; i++) {
         $('#videos-list').append(
             `<li>
@@ -65,56 +66,74 @@ function displayYouTubeResults(responseJson) {
     $('#videos-list').removeClass('hidden');
 }
 
-// // This will be the section for locations API
-
-// const clientID = 'YMBYSODCXL3DCEIJGJIW2N5EGME0O10PVDF2A41Z1MIP0KZD';
-// const clientSecret = 'LIWLXKL0O1ASSEMUWFC15SUTCU4WK1PJXBNLUHTRCJQW5BWW';
-// const fourSquareURL = `https://api.foursquare.com/v2/venues/explore?client_id=${clientID}&client_secret=${clientSecret}&v=20180323&limit=5&ll=40.7243,-74.0018&query=coffee`
-
-// function getMapData() {
-// fetch(fourSquareURL).then(res => {
-//     if (res.ok) {
-//         return res.json();
-//     } else {
-//         throw new Error(res.statusText);
-//     }
-// })
-// .then(res => {
-//     console.log(res)
-//     displayMap(res);
-// })
-// .catch(err => {
-//     console.log(err.statusText)
-// });
-// }
-
-// function displayMap(mapData) {
-//     $('#info-holder').empty();
-//     for (let i = 0; i < mapData.groups.items.length; i++) {
-//         $('#info-holder').append(
-//             `<li>
-//                 <h3>${mapData.groups.items[i].venue.name}</h3>
-//                 <p>${mapData.groups.items[i].venue.location}</p>            
-//             </li>
-//             `
-//         )
-//     }
-
-//     $('#info-holder').removeClass('hidden');
-// }
-
-// trying the google maps api   
-
-const apiKey = 'AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4';
 
 
-function initMap() {
-  let map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
-  });
+
+////////////////////////////////Maps API section////////////////////
+const googleApiKey = 'AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4'
+  
+
+//geo coding
+function getLatLong(zip) {
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:${zip}
+    &key=${googleApiKey}`
+    fetch(url).then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error(response.statusText);
+        }
+    })
+        .then(responseJson => getMapData(responseJson))
+        .catch(err => {
+            console.log(`${err.message}`)
+        })
 }
 
+const clientID = 'YMBYSODCXL3DCEIJGJIW2N5EGME0O10PVDF2A41Z1MIP0KZD';
+const clientSecret = 'LIWLXKL0O1ASSEMUWFC15SUTCU4WK1PJXBNLUHTRCJQW5BWW';
+
+function getMapData(coords) {
+    const loc = coords.results[0].geometry.location;
+    const lat = coords.results[0].geometry.location.lat;
+    const long = coords.results[0].geometry.location.lng;
+    const fourSquareURL = `https://api.foursquare.com/v2/venues/explore?radius=10000&client_id=${clientID}&client_secret=${clientSecret}&v=20180323&limit=5&ll=${lat},${long}&query=phone+repair`
+    
+    fetch(fourSquareURL).then(res => {
+        if (res.ok) {
+            return res.json();
+        } else {
+            throw new Error(res.statusText);
+        }
+    })
+    .then(res => {
+        console.log(res)
+        initMap(res, loc)
+        })
+    .catch(err => {
+        console.log(err.statusText)
+    });
+}
+
+function initMap(venues, start) {
+    let map = new google.maps.Map(document.getElementById('map'), {
+        center: start,
+        zoom: 12
+      });
+
+      for (let i = 0; i < venues.response.groups[0].items.length; i++) {
+        let shortPath = venues.response.groups[0].items[i].venue;
+        let lat = shortPath.location.lat;
+        let long = shortPath.location.lng;
+        let label = shortPath.name;
+
+        let marker = new google.maps.Marker({
+            position: {lat: lat, lng: long},
+            map: map,
+            title: label
+        });
+    }
+}
 
 
 // added scroll effect //
