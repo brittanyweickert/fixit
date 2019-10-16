@@ -1,9 +1,5 @@
 $(init);
 
-// This first section of code will pull the youtube vids from their site
-// I figure we can move this view to the appropriate location when we get it set up,
-// but for now we got our videos coming up!
-
 function init() {
     handleVideoFormSubmit();
     handleMapFormSubmit();
@@ -88,6 +84,7 @@ const googleApiKey = 'AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4'
   
 
 //geo coding //////
+
 function getLatLong(zip) {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:${zip}
     &key=${googleApiKey}`
@@ -154,6 +151,7 @@ function initMap(venues, start) {
     displayResultsInfo(venues);
 }
 
+// Displays Map info in a list ////
 
 function displayResultsInfo(venues) {
     $('#map-info-list').empty();
