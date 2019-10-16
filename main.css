@@ -5,7 +5,7 @@ html    {scroll-behavior: smooth;}
 /* Header */
 
 .header {
-    background: url(images/bg4.jpg) center center no-repeat fixed;
+    background: url(images/bg2.jpg) center center no-repeat fixed;
     background-size: cover;
 }
 
@@ -22,6 +22,10 @@ html    {scroll-behavior: smooth;}
 }
 
 /*Text Styles*/
+
+.center {
+    text-align: center;
+}
 
 h1, h2, h3 {
     font-family: 'Lato', sans-serif; 
@@ -179,4 +183,3 @@ background-color: rgba(47, 47, 51, 0.2);;
         font-size: 12px;
     }
 }
-
