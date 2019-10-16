@@ -21,7 +21,7 @@
                     required spellcheck="true">
                 <input id="zip" type="text" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$"
                 name="zipcode" placeholder="zipcode" required >
-                <input type="submit" class="submitButton" href="#videos-list">
+                <input type="submit" class="submitButton" onclick="smoothScroll(document.getElementById('videos'))">
             </form>
         </div>
         <div class="box map">
@@ -33,7 +33,7 @@
             </hr>
             <div id="info-holder"></div>
         </div>
-        <div class="box videos">
+        <div class="box videos" id="videos">
             <h3 class="center">Watch
                 <i class="icon ion-logo-youtube"></i>
             </h3>
