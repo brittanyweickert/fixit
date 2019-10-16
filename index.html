@@ -22,9 +22,11 @@
                 <input type="submit" class="submitButton" href="#videos-list">
             </form>
         </div>
-        <div class="box mapData">
+        <div class="box map">
             <h3 class="center">Buy a new one
                 <i class="icon ion-md-call"></i>
+                <div id="map">
+                </div>
             </h3>
             </hr>
             <div id="info-holder"></div>
@@ -42,6 +44,18 @@
                     href="https://unsplash.com/">UPSPLASH</a></p>
         </div>
     </div>
+    <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+          });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4&callback=initMap"
+    async defer>
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="main.js"></script>

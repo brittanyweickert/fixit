@@ -183,3 +183,11 @@ background-color: rgba(47, 47, 51, 0.2);;
         font-size: 12px;
     }
 }
+
+/* map style */
+.map{
+    height: 300px;
+}
+#map {
+    height: 100%;
+  }

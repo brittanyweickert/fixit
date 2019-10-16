@@ -102,3 +102,7 @@ function displayYouTubeResults(responseJson) {
 
 //     $('#info-holder').removeClass('hidden');
 // }
+
+// trying the google maps api   
+
+const apiKey = 'AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4';
