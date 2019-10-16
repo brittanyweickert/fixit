@@ -94,7 +94,9 @@ input {
 
 /* map Styles */
 
-
+#map {
+    height: 100%;
+  }
 
 /* Footer */
 

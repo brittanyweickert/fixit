@@ -17,7 +17,7 @@
             <h1 class="headLine">Oh crap, my phone broke.</h1>
             <h2 class="subHeadLine">How do I fix it myself?</h2>
             <form id="search-videos">
-                <input id="videos-search-field" type="text" name="searchfield" placeholder="smartphone" autofocus
+                <input id="videos-search-field" type="text" name="searchfield" placeholder="e.g. iphoneXS" autofocus
                     required spellcheck="true">
                 <input id="zip" type="text" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$"
                 name="zipcode" placeholder="zipcode" required >
@@ -27,11 +27,9 @@
         <div class="box map">
             <h3 class="center">Buy a new one
                 <i class="icon ion-md-call"></i>
-                <div id="map">
-                </div>
+                <div id="map"></div>
             </h3>
             </hr>
-            <div id="info-holder"></div>
         </div>
         <div class="box videos" id="videos">
             <h3 class="center">Watch
@@ -46,15 +44,7 @@
                     href="https://unsplash.com/">UPSPLASH</a></p>
         </div>
     </div>
-    <script>
-        var map;
-        function initMap() {
-          map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
-          });
-        }
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4&callback=initMap"
     async defer>
     </script>
