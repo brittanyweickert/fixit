@@ -17,11 +17,14 @@
             <h1 class="headLine">Oh crap, my phone broke.</h1>
             <h2 class="subHeadLine">How do I fix it myself?</h2>
             <form id="search-videos">
-                <input id="videos-search-field" type="text" name="searchfield" placeholder="e.g. iphoneXS" autofocus
+                <input id="videos-search-field" type="text" name="searchfield" placeholder="e.g. iphone XS" autofocus
                     required spellcheck="true">
+                <input type="submit" class="submitButton">
+            </form>
+            <form id="search-maps">
                 <input id="zip" type="text" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$"
                 name="zipcode" placeholder="zipcode" required >
-                <input type="submit" class="submitButton" onclick="smoothScroll(document.getElementById('videos'))">
+                <input type="submit" class="submitButton">
             </form>
         </div>
         <div class="box map">

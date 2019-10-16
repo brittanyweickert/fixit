@@ -1,22 +1,40 @@
-$(handleFormSubmit);
+$(init);
 
 // This first section of code will pull the youtube vids from their site
 // I figure we can move this view to the appropriate location when we get it set up,
 // but for now we got our videos coming up!
 
+function init() {
+    handleVideoFormSubmit();
+    handleMapFormSubmit();
+}
 
-function handleFormSubmit() {
+function handleMapFormSubmit() {
+    $('#search-maps').on('submit', e => {
+        e.preventDefault();       
+        let zip = $('#zip').val();
+        console.log(zip)
+        if (!zip) {
+            alert('Please enter a valid zip code');                  
+        } else {
+            getLatLong(zip);
+            smoothScroll(document.getElementById('videos'))
+        }
+    })
+}
+
+
+function handleVideoFormSubmit() {
     $('#search-videos').on('submit', e => {
         e.preventDefault();
-        let searchTerm = $('#videos-search-field').val() + 'repair';
+        let searchTerm = $('#videos-search-field').val() + 'smartphone+repair';
         const maxResults = 4;       
-        let zip = $('#zip').val();
 
-        if (searchTerm !== '') {
-            getYouTubeVideos(searchTerm, maxResults);
-            getLatLong(zip);            
+        if (!searchTerm) {
+            alert('Please enter your phone model');                
         } else {
-            alert('Please enter your phone model');
+            getYouTubeVideos(searchTerm, maxResults);
+            smoothScroll(document.getElementById('videos'))
         }
     })
 }
@@ -44,7 +62,7 @@ function getYouTubeVideos(searchTerm, resultsMax) {
     })
         .then(responseJson => displayYouTubeResults(responseJson))
         .catch(err => {
-            console.log(`${err.message}`)
+            $('videos-list').html(`<h1>${err.message}</h1>`)
         })
 }
 
@@ -71,7 +89,7 @@ function displayYouTubeResults(responseJson) {
 const googleApiKey = 'AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4'
   
 
-//geo coding
+//geo coding //////
 function getLatLong(zip) {
     const url = `https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:${zip}
     &key=${googleApiKey}`
@@ -87,6 +105,9 @@ function getLatLong(zip) {
             console.log(`${err.message}`)
         })
 }
+
+
+// Using Foursquare to find venues/////
 
 const clientID = 'YMBYSODCXL3DCEIJGJIW2N5EGME0O10PVDF2A41Z1MIP0KZD';
 const clientSecret = 'LIWLXKL0O1ASSEMUWFC15SUTCU4WK1PJXBNLUHTRCJQW5BWW';
@@ -113,6 +134,8 @@ function getMapData(coords) {
     });
 }
 
+// Creating the Map and inserting markers /////
+
 function initMap(venues, start) {
     let map = new google.maps.Map(document.getElementById('map'), {
         center: start,
@@ -135,7 +158,7 @@ function initMap(venues, start) {
 
 
 // added scroll effect //
-window.smoothScroll = function(target) {
+let smoothScroll = function(target) {
     var scrollContainer = target;
     do { //find scroll container
         scrollContainer = scrollContainer.parentNode;
