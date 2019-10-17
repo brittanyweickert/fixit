@@ -9,7 +9,6 @@ function handleMapFormSubmit() {
     $('#search-maps').on('submit', e => {
         e.preventDefault();       
         let zip = $('#zip').val();
-        console.log(zip)
         if (!zip) {
             alert('Please enter a valid zip code');                  
         } else {
@@ -112,7 +111,7 @@ function getMapData(coords) {
     const loc = coords.results[0].geometry.location;
     const lat = coords.results[0].geometry.location.lat;
     const long = coords.results[0].geometry.location.lng;
-    const fourSquareURL = `https://api.foursquare.com/v2/venues/explore?radius=100000&client_id=${clientID}&client_secret=${clientSecret}&v=20180323&limit=5&ll=${lat},${long}&query=phone+repair`
+    const fourSquareURL = `https://api.foursquare.com/v2/venues/explore?radius=10000&client_id=${clientID}&client_secret=${clientSecret}&v=20180323&limit=5&ll=${lat},${long}&query=phone+repair`
     
     fetch(fourSquareURL).then(res => {
         if (res.ok) {
@@ -134,7 +133,7 @@ function getMapData(coords) {
 function initMap(venues, start) {
     let map = new google.maps.Map(document.getElementById('map'), {
         center: start,
-        zoom: 12
+        zoom: 10
       });
 
       for (let i = 0; i < venues.response.groups[0].items.length; i++) {
@@ -159,7 +158,6 @@ function displayResultsInfo(venues) {
     for (let i = 0; i < venues.response.groups[0].items.length; i++) {
         let shortPath = venues.response.groups[0].items[i].venue;
         let addressInfo = shortPath.location.formattedAddress[0] + ', ' + shortPath.location.formattedAddress[1] + ', ' + shortPath.location.formattedAddress[2]
-
         $('#map-info-list').append( `<li>
                 <h4 class="mapHeader">${shortPath.name}</h4>               
                 <p class="mapInfo">${addressInfo}</p>
