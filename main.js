@@ -35,7 +35,7 @@ function handleVideoFormSubmit() {
 }
 
 function getYouTubeVideos(searchTerm, resultsMax) {
-    const apiKey = 'AIzaSyDDgzOdf_q3pwdLbEi8geqdP4avXz2X3lM';
+    const apiKey = 'AIzaSyCmJ3sYrd9ZvBGbYJumNlbUlFLwzI-NaAs';
     const youTubeApiUrl = 'https://www.googleapis.com/youtube/v3/search';
     const params = {
         key: apiKey,
