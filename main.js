@@ -65,11 +65,12 @@ function getYouTubeVideos(searchTerm, resultsMax) {
 function displayYouTubeResults(responseJson) {
     $('#videos-list').empty();
     for (let i = 0; i < responseJson.items.length; i++) {
+        console.log(responseJson.items[i])
         $('#videos-list').append(
             `<li>
-                <h3>${responseJson.items[i].snippet.title}</h3>
-                <p>${responseJson.items[i].snippet.description}</p>
-                <img src='${responseJson.items[i].snippet.thumbnails.high.url}'
+                <h3 class="ytHeader">${responseJson.items[i].snippet.title}</h3>
+                <p class="youtubeDescription">${responseJson.items[i].snippet.description}</p>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </li>
             `
         )
