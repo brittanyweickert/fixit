@@ -65,7 +65,9 @@ body {
     background: #9a9a9a;
 }
 
-
+li {
+    list-style-type: none;
+}
 input {
 	outline: none;
 	border: 3px #7863AE solid;
