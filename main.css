@@ -69,6 +69,7 @@ li {
     list-style-type: none;
 }
 input {
+    color: white;
 	outline: none;
 	border: 3px #7863AE solid;
 	border-radius: 10px;

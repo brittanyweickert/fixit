@@ -24,7 +24,7 @@ function handleVideoFormSubmit() {
     $('#search-videos').on('submit', e => {
         e.preventDefault();
         let searchTerm = $('#videos-search-field').val() + 'smartphone+repair';
-        const maxResults = 4;       
+        const maxResults = 3;       
 
         if (!searchTerm) {
             alert('Please enter your phone model');                
