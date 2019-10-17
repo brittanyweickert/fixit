@@ -36,7 +36,7 @@ function handleVideoFormSubmit() {
 }
 
 function getYouTubeVideos(searchTerm, resultsMax) {
-    const apiKey = 'AIzaSyDDgzOdf_q3pwdLbEi8geqdP4avXz2X3lM';
+    const apiKey = 'AIzaSyCmJ3sYrd9ZvBGbYJumNlbUlFLwzI-NaAs';
     const youTubeApiUrl = 'https://www.googleapis.com/youtube/v3/search';
     const params = {
         key: apiKey,
@@ -112,7 +112,7 @@ function getMapData(coords) {
     const loc = coords.results[0].geometry.location;
     const lat = coords.results[0].geometry.location.lat;
     const long = coords.results[0].geometry.location.lng;
-    const fourSquareURL = `https://api.foursquare.com/v2/venues/explore?radius=100000&client_id=${clientID}&client_secret=${clientSecret}&v=20180323&limit=5&ll=${lat},${long}&query=phone+repair`
+    const fourSquareURL = `https://api.foursquare.com/v2/venues/explore?radius=10000&client_id=${clientID}&client_secret=${clientSecret}&v=20180323&limit=5&ll=${lat},${long}&query=phone+repair`
     
     fetch(fourSquareURL).then(res => {
         if (res.ok) {
