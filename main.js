@@ -9,7 +9,6 @@ function handleMapFormSubmit() {
     $('#search-maps').on('submit', e => {
         e.preventDefault();       
         let zip = $('#zip').val();
-        console.log(zip)
         if (!zip) {
             alert('Please enter a valid zip code');                  
         } else {
@@ -134,7 +133,7 @@ function getMapData(coords) {
 function initMap(venues, start) {
     let map = new google.maps.Map(document.getElementById('map'), {
         center: start,
-        zoom: 12
+        zoom: 10
       });
 
       for (let i = 0; i < venues.response.groups[0].items.length; i++) {
@@ -159,7 +158,6 @@ function displayResultsInfo(venues) {
     for (let i = 0; i < venues.response.groups[0].items.length; i++) {
         let shortPath = venues.response.groups[0].items[i].venue;
         let addressInfo = shortPath.location.formattedAddress[0] + ', ' + shortPath.location.formattedAddress[1] + ', ' + shortPath.location.formattedAddress[2]
-
         $('#map-info-list').append( `<li>
                 <h4 class="mapHeader">${shortPath.name}</h4>               
                 <p class="mapInfo">${addressInfo}</p>
