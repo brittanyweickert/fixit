@@ -161,8 +161,8 @@ function displayResultsInfo(venues) {
         let addressInfo = shortPath.location.formattedAddress[0] + ', ' + shortPath.location.formattedAddress[1] + ', ' + shortPath.location.formattedAddress[2]
 
         $('#map-info-list').append( `<li>
-                <h4>${shortPath.name}</h4>               
-                <p>${addressInfo}</p>
+                <h4 class="mapHeader">${shortPath.name}</h4>               
+                <p class="mapInfo">${addressInfo}</p>
             </li>
         `)
     }
