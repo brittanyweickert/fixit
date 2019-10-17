@@ -14,6 +14,7 @@
 <body>
     <div class="wrapper">
         <div class="box header">
+            <div class="input1">
             <h1 class="headLine">Oh crap, my phone broke.</h1>
             <h2 class="subHeadLine">How do I fix it?</h2>
             <form id="search-videos">
@@ -21,15 +22,19 @@
                     required spellcheck="true">
                 <input type="submit" class="submitButton">
             </form>
+            </div>
+            <div class="input2">
+            <h2 class="subHeadLine">Yea, right.  Where do I find a professional?</h2>
             <form id="search-maps">
                 <input id="zip" type="text" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$"
                 name="zipcode" placeholder="zipcode" required >
                 <input type="submit" class="submitButton">
             </form>
+            </div>
         </div>
         <div class="box map">
             <h3 class="center">Go to the Pro's
-                <i class="icon ion-md-call"></i>
+                <i class="icon ion-md-pin"></i>
             </h3>
             </hr>
             <div id="map"></div>
@@ -44,6 +49,9 @@
             </h3>
             </hr>
             <div id="videos-list"></div>
+        </div>
+        <div class="box meme" id="meme">
+            <img src="images/phone.jpg" alt="meme"/>
         </div>
         <div class="box footer">
             <p class="copyright">Design: <a href="https://brittanyweickert.dev" target="_blank">BRITTANY WEICKERT</a> &
