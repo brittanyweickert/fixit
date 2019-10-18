@@ -1,35 +1,20 @@
-$(init);
+$(handleFormSubmit);
 
-function init() {
-    handleVideoFormSubmit();
-    handleMapFormSubmit();
-}
-
-function handleMapFormSubmit() {
-    $('#search-maps').on('submit', e => {
+function handleFormSubmit() {
+    $('#search-form').on('submit', e => {
         e.preventDefault();       
         let zip = $('#zip').val();
-        if (!zip) {
-            alert('Please enter a valid zip code');                  
+        let searchTerm = $('#videos-search-field').val() + 'smartphone+repair';
+        const maxResults = 3;  
+
+        if (!zip || !searchTerm) {
+            alert('Please Fill Out Both Fields');                  
         } else {
             getLatLong(zip);
-            smoothScroll(document.getElementById('videos'))
-        }
-    })
-}
-
-
-function handleVideoFormSubmit() {
-    $('#search-videos').on('submit', e => {
-        e.preventDefault();
-        let searchTerm = $('#videos-search-field').val() + 'smartphone+repair';
-        const maxResults = 3;       
-
-        if (!searchTerm) {
-            alert('Please enter your phone model');                
-        } else {
             getYouTubeVideos(searchTerm, maxResults);
             smoothScroll(document.getElementById('videos'))
+            $('.map').removeClass('hidden');
+            $('.videos').removeClass('hidden');
         }
     })
 }
@@ -76,8 +61,6 @@ function displayYouTubeResults(responseJson) {
         )
     }
 }
-
-
 
 
 ////////////////////////////////Maps API section////////////////////

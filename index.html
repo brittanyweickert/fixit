@@ -15,39 +15,37 @@
     <div class="wrapper">
         <div class="box header">
             <h1 class="headLine">Oh crap, my phone broke.</h1>
-                <h2 class="subHeadLine">Show me how to fix it.</h2>
-                <form id="search-videos">
-                    <input id="videos-search-field" type="text" name="searchfield" placeholder="e.g. iphone XS"
-                        autofocus required spellcheck="true">
-            <form id="search-maps">
+            <h2 class="subHeadLine">Show me how to fix it.</h2>
+            <form id="search-form">
+                <input id="videos-search-field" type="text" name="searchfield" placeholder="e.g. iphone XS" autofocus
+                    required spellcheck="true">
                 <input id="zip" type="text" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" name="zipcode"
                     placeholder="zipcode" required>
                 <input type="submit" class="submitButton">
             </form>
-            </div>
         </div>
-        <div class="box map">
-            <h3 class="center">Go to the Pro's
-                <i class="icon ion-md-pin"></i>
-            </h3>
-            </hr>
-            <div id="map"></div>
-            <div id="map-info">
-                <ul id="map-info-list">
-                </ul>
-            </div>
+    </div>
+    <div class="box map hidden">
+        <h3 class="center">Go to the Pro's
+            <i class="icon ion-md-pin"></i>
+        </h3>
+        <hr>
+        <div id="map"></div>
+        <div id="map-info">
+            <ul id="map-info-list">
+            </ul>
         </div>
-        <div class="box videos" id="videos">
-            <h3 class="center">Do it yourself
-                <i class="icon ion-logo-youtube"></i>
-            </h3>
-            </hr>
-            <div id="videos-list"></div>
-        </div>
-        <div class="box footer">
-            <p class="copyright">Design: <a href="https://brittanyweickert.dev" target="_blank">BRITTANY WEICKERT</a> &
-                <a href="https://r-kadel.github.io/Portfolio/" target="_blank">RYAN KADEL</a>.</p>
-        </div>
+    </div>
+    <div class="box videos hidden" id="videos">
+        <h3 class="center">Do it yourself
+            <i class="icon ion-logo-youtube"></i>
+        </h3>
+        <hr>
+        <div id="videos-list"></div>
+    </div>
+    <div class="box footer">
+        <p class="copyright">Design: <a href="https://brittanyweickert.dev" target="_blank">BRITTANY WEICKERT</a> &
+            <a href="https://r-kadel.github.io/Portfolio/" target="_blank">RYAN KADEL</a>.</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
