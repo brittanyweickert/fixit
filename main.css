@@ -241,16 +241,23 @@ padding: 8px;
         max-height: 100%;
     }
     .header {
-        padding: 40px;
+        min-height: -webkit-fill-available;
+        padding: 20px;
     }
     .headLine {
         font-size: 2rem;
         font-weight: 500;
     }
+
     .subHeadLine {
         font-size: 1.4rem;
         font-weight: 400;
     }
+
+    .ytHeader {
+        font-size: 18px;
+    }
+
     input {
         padding: 25px;
     }
@@ -263,6 +270,10 @@ padding: 8px;
 @media screen and (max-width: 450px) {
     input, .submitButton {
         width: 250px;
+        font-size: 12px;
+    }
+
+    .ytHeader {
         font-size: 15px;
     }
 
