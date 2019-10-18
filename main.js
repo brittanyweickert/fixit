@@ -10,11 +10,11 @@ function handleFormSubmit() {
         if (!zip || !searchTerm) {
             alert('Please Fill Out Both Fields');                  
         } else {
-            getLatLong(zip);
-            getYouTubeVideos(searchTerm, maxResults);
-            smoothScroll(document.getElementById('videos'))
             $('.map').removeClass('hidden');
             $('.videos').removeClass('hidden');
+            getYouTubeVideos(searchTerm, maxResults);
+            getLatLong(zip);
+            smoothScroll(document.getElementById('videos'))
         }
     })
 }
