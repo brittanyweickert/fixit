@@ -241,7 +241,7 @@ padding: 8px;
         max-height: 100%;
     }
     .header {
-        padding: 50px;
+        padding: 40px;
     }
     .headLine {
         font-size: 2rem;
@@ -252,7 +252,7 @@ padding: 8px;
         font-weight: 400;
     }
     input {
-        padding: 15px;
+        padding: 25px;
     }
     .submitButton {
         padding: 17px;
