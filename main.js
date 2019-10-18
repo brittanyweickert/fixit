@@ -42,7 +42,8 @@ function getYouTubeVideos(searchTerm, resultsMax) {
         q: searchTerm,
         part: 'snippet',
         maxResults: resultsMax,
-        type: 'video'
+        type: 'video',
+        relevanceLanguage: 'en'
     };
 
     let queryString = $.param(params);
@@ -57,7 +58,7 @@ function getYouTubeVideos(searchTerm, resultsMax) {
     })
         .then(responseJson => displayYouTubeResults(responseJson))
         .catch(err => {
-            $('videos-list').html(`<h1>${err.message}</h1>`)
+            $('#videos-list').html(`<h1>${err.message}</h1>`)
         })
 }
 
@@ -97,7 +98,7 @@ function getLatLong(zip) {
     })
         .then(responseJson => getMapData(responseJson))
         .catch(err => {
-            console.log(`${err.message}`)
+            $('#map').html(`<h3>Please Enter A Valid Zip Code</h3>`)
         })
 }
 
@@ -124,7 +125,7 @@ function getMapData(coords) {
         initMap(res, loc)
         })
     .catch(err => {
-        console.log(err.statusText)
+        $('#map').html(`<h3>Please Enter a Valid Zip Code</h3>`)
     });
 }
 
@@ -133,7 +134,7 @@ function getMapData(coords) {
 function initMap(venues, start) {
     let map = new google.maps.Map(document.getElementById('map'), {
         center: start,
-        zoom: 10
+        zoom: 9
       });
 
       for (let i = 0; i < venues.response.groups[0].items.length; i++) {

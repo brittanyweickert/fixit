@@ -52,6 +52,10 @@ h3 {
     margin: 0 0 2rem;
 }
 
+.error {
+    color: red;
+}
+
 /* Main Styles */
 body {
     font-family: 'Lato', sans-serif; 
@@ -96,11 +100,18 @@ input {
     max-height: 100%;
     overflow: auto;
 }
+
 .ytHeader {
+    color: #555;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px #eaeaea;
     text-align: center;
     margin: 0;
     text-transform: uppercase;
 }
+
 .youtubeDescription {
     margin: 20px;
     text-align: center;
@@ -172,7 +183,6 @@ input {
 .header     {grid-area: header;}
 .footer     {grid-area: footer;}
 .map        {grid-area: map;}
-.meme       {grid-area: meme;}
 .videos     {grid-area: videos;}
 
 .wrapper {
@@ -180,10 +190,9 @@ input {
     grid-template-areas: 
         "header header header"
         "videos videos map"
-        "videos videos meme"
         "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100vh 1fr 1fr 5px;
+    grid-template-rows: 100vh 1fr 5px;
 }
 
 .box {
@@ -227,10 +236,9 @@ padding: 8px;
         "header"
         "videos"
         "map"
-        "meme"
         "footer";
         grid-template-columns: 100%;
-        grid-template-rows: 100vh 1fr 1fr 4px;
+        grid-template-rows: 100vh 1fr 4px;
     }
 }
 
