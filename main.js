@@ -58,7 +58,7 @@ function getYouTubeVideos(searchTerm, resultsMax) {
     })
         .then(responseJson => displayYouTubeResults(responseJson))
         .catch(err => {
-            $('#videos-list').html(`<h1>${err.message}</h1>`)
+            $('#videos-list').html(`<h3 class="error">${err.message}</h3>`)
         })
 }
 
@@ -98,7 +98,7 @@ function getLatLong(zip) {
     })
         .then(responseJson => getMapData(responseJson))
         .catch(err => {
-            $('#map').html(`<h3>Please Enter A Valid Zip Code</h3>`)
+            $('#map').html(`<h3 class="error">Please Enter A Valid Zip Code</h3>`);
         })
 }
 
@@ -125,7 +125,7 @@ function getMapData(coords) {
         initMap(res, loc)
         })
     .catch(err => {
-        $('#map').html(`<h3>Please Enter a Valid Zip Code</h3>`)
+        $('#map').html(`<h3 class="error">Please Enter a Valid Zip Code</h3>`);
     });
 }
 
