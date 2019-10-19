@@ -1,5 +1,5 @@
 *               {margin: 0%; box-sizing: border-box; position: relative; vertical-align: middle;}
-body            {overflow: hidden;}
+
 /* Header */
 
 .header {
@@ -266,9 +266,8 @@ padding: 8px;
 }
 
 @media screen and (max-width: 450px) {
-    input, .submitButton {
+    input {
         width: 300px;
-        height: auto;
         font-size: 12px;
     }
 
