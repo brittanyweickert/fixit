@@ -49,7 +49,6 @@ function getYouTubeVideos(searchTerm, resultsMax) {
 function displayYouTubeResults(responseJson) {
     $('#videos-list').empty();
     for (let i = 0; i < responseJson.items.length; i++) {
-        console.log(responseJson.items[i])
         $('#videos-list').append(
             `<li>
                 <h3 class="ytHeader">${responseJson.items[i].snippet.title}</h3>
@@ -117,7 +116,7 @@ function getMapData(coords) {
 function initMap(venues, start) {
     let map = new google.maps.Map(document.getElementById('map'), {
         center: start,
-        zoom: 9
+        zoom: 10
       });
 
       for (let i = 0; i < venues.response.groups[0].items.length; i++) {
