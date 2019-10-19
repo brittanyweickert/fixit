@@ -11,15 +11,49 @@
     animation: showHeadLine 2s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
-    text-shadow: 0 0 3px #777777;
+    text-shadow: 0 0 3px #dedbdb;
 }
 
 .subHeadLine {
     animation: showSubHeadLine 2.5s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
-    text-shadow: 0 0 3px #777777;
+    text-shadow: 0 0 3px #dedbdb;
 }
+
+/* info */
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.tooltip .tooltiptext {
+    width: 250px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
 
 /*Text Styles*/
 
@@ -59,6 +93,7 @@ h3 {
 }
 
 /* Main Styles */
+
 .header, .footer {
     display: block;
 }
@@ -86,11 +121,11 @@ input {
 	outline: none;
 	border: 3px #7863AE solid;
 	border-radius: 10px;
-	background-color: rgba(47, 47, 51, 0.2);
+	background-color: rgba(58, 58, 60, 0.2);
 	padding: 12px 100px 12px 20px;
 	font-size: 25px;
 } input::placeholder {
-    color: rgba(196, 191, 190, 0.934);
+    color: rgba(238, 235, 235, 0.934);
     font-weight: 300;
 }
 
