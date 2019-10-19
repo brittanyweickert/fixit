@@ -345,7 +345,7 @@ input {
     }
 
     #map-info {
-        min-height: 500px;
+        min-height: 400px;
     }
 
 }
@@ -369,6 +369,6 @@ input {
     }
 
     #map-info {
-        min-height: 400px;
+        min-height: 300px;
     }
 }
