@@ -1,5 +1,5 @@
-*       {margin: 0%; box-sizing: border-box; position: relative; vertical-align: middle;}
-
+*               {margin: 0%; box-sizing: border-box; position: relative; vertical-align: middle;}
+body            {overflow: hidden;}
 /* Header */
 
 .header {
@@ -241,7 +241,6 @@ padding: 8px;
         max-height: 100%;
     }
     .header {
-        min-height: -webkit-fill-available;
         padding: 20px;
     }
     .headLine {
@@ -258,18 +257,18 @@ padding: 8px;
         font-size: 18px;
     }
 
-    input {
-        padding: 25px;
-    }
-    .submitButton {
-        padding: 17px;
-    }
+    .header {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    } 
 
 }
 
 @media screen and (max-width: 450px) {
     input, .submitButton {
-        width: 250px;
+        width: 300px;
+        height: auto;
         font-size: 12px;
     }
 
