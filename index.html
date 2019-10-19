@@ -3,17 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fix It API</title>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
+    <link rel="shortcut icon" href="" />
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper">
         <div class="box header">
+            <div id="top"></div>
             <h1 class="headLine">Oh crap, my phone broke.</h1>
             <h2 class="subHeadLine">Show me how to fix it.</h2>
             <form id="search-form">
@@ -40,11 +42,14 @@
             </h3>
             <div id="videos-list"></div>
         </div>
-        <div class="box footer">
+        <button onclick="topFunction()" id="topBtn" title="Go to top"><a href="#top"><i class="fa fa-angle-double-up fa-4x" aria-hidden="true"></i></button>
+
+        <div class="box footer hidden">
             <p class="copyright">Design: <a href="https://brittanyweickert.dev" target="_blank">BRITTANY WEICKERT</a> &
                 <a href="https://r-kadel.github.io/Portfolio/" target="_blank">RYAN KADEL</a>.</p>
         </div>
     </div>
+    <script src="https://use.fontawesome.com/c0fbee99e0.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4" defer></script>
