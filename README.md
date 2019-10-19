@@ -1,8 +1,8 @@
 # fixit_APIcapstone
 
-repo - https://github.com/brittanyweickert/fixit_APIcapstone
+repo - https://github.com/brittanyweickert/fixit
 
-github pages - https://brittanyweickert.github.io/fixit_APIcapstone/
+github pages - https://brittanyweickert.github.io/fixit
 
 This is the API Hack capstone project for Thinkul's Nights and Weekends software engineering course
 
