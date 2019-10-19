@@ -343,6 +343,7 @@ input {
         justify-content: center;
         align-items: center;
     }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -361,5 +362,9 @@ input {
 
     h1 {
         font-size: 1rem;
+    }
+
+    .error-meme {
+        min-height: 100%;
     }
 }
