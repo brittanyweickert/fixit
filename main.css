@@ -90,7 +90,8 @@ input {
 	padding: 12px 100px 12px 20px;
 	font-size: 25px;
 } input::placeholder {
-    color: rgba(206, 198, 197, 0.705);
+    color: rgba(196, 191, 190, 0.934);
+    font-weight: 300;
 }
 
 .submitButton {
@@ -209,8 +210,12 @@ input {
     border-radius: 10px; 
   } #topBtn:hover {
     background-color: #555;
-  } #topButton :active {
-      color: black;
+  } #topBtn a:active {
+    color: #fff;
+  } #topBtn a:focus {
+    color: #fff;
+  } .fa {
+      color: white;
   }
 
 
@@ -286,9 +291,12 @@ input {
     }
 
     .header {
-        display: block;
-    } 
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
 }
 
 @media screen and (max-width: 450px) {
