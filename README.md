@@ -9,9 +9,7 @@ This is the API Hack capstone project for Thinkul's Nights and Weekends software
 FixIt
 designed by Brittany Weickert and Ryan Kadel
 
-***Screenshot(s) of your app. This makes your app description much easier to understand.***
-![ScreenShot](/images/Screenshot (4).png)
-
+![ScreenShot](/images/Screenshot.png)
 
 
 The App is designed with people who have recently damaged their smartphones in mind.
