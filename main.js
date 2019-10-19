@@ -121,7 +121,8 @@ function initMap(venues, start) {
 
     if (venues.response.groups[0].items.length < 1) {
         $('#map').html(`<h3 class="error">Sorry! We Couldnt Locate any Nearby repair shops for you.</h3>
-                            <p class="error">Please try a different zip code.`);
+                            <img class="error-meme" src="images/phone.jpg">
+                            <p class="error">Please try a different zip code.</p>`);
     } else {
         for (let i = 0; i < venues.response.groups[0].items.length; i++) {
             let shortPath = venues.response.groups[0].items[i].venue;

@@ -230,7 +230,9 @@ input {
 .header {
     padding: 150px;
 }
-
+.error-meme {
+    max-width: 100%;
+}
 /* Go to Top Button */
 
 #topBtn {
