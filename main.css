@@ -52,7 +52,6 @@
     width: 250px;
     top: 100%;
     left: 50%;
-    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
   }
 
 .fa- {
@@ -329,16 +328,26 @@ input {
         font-size: 18px;
     }
 
-    .header {
+    input, .headLine, .subHeadLine, .submitButton {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         align-content: center;
     }
+
+    .tooltiptext {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 450px) {
+    .footer {
+    font-size: 8px;
+    }
+
     input {
         width: 300px;
         font-size: 12px;
