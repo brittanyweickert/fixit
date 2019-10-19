@@ -175,10 +175,6 @@ input {
     overflow: auto;
 }
 
-#map-info-list {
-    padding-top: 5px;
-}
-
 #map {
     height: 40%;
   }

@@ -10,6 +10,7 @@ FixIt
 designed by Brittany Weickert and Ryan Kadel
 
 ***Screenshot(s) of your app. This makes your app description much easier to understand.***
+![ScreenShot](/images/Screenshot (4).png)
 
 
 
