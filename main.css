@@ -124,7 +124,7 @@ input {
 	outline: none;
 	border: 3px #7863AE solid;
 	border-radius: 10px;
-	background-color: rgba(58, 58, 60, 0.2);
+	background-color: rgba(17, 17, 18, 0.386);
 	padding: 12px 100px 12px 20px;
 	font-size: 25px;
 } input::placeholder {
@@ -137,7 +137,7 @@ input {
 	border: 3px solid #7863AE;
 	border-radius: 10px;
 	background-color: #7863AE;
-	padding: 10px 15px;
+	padding: 12px 15px;
 	outline: none;
 	font-size: 25px;
 }
@@ -351,8 +351,8 @@ input {
 }
 
 @media screen and (max-width: 450px) {
-    .footer {
-    font-size: 8px;
+    .footer .copyright {
+    font-size: 7px;
     }
 
     input {
