@@ -344,6 +344,10 @@ input {
         align-items: center;
     }
 
+    #map-info {
+        min-height: 500px;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -365,6 +369,6 @@ input {
     }
 
     #map-info {
-        min-height: 500px;
+        min-height: 400px;
     }
 }
