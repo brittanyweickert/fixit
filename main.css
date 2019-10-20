@@ -310,6 +310,16 @@ ul {
         grid-template-columns: 100%;
         grid-template-rows: 100vh auto auto 4px;
     }
+
+    input, .submitButton {
+        margin-bottom: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
     .map {
         max-height: 100%;
     }
@@ -341,14 +351,6 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    
-    input, .headLine, .subHeadLine, .submitButton {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
     }
 
     .footer .copyright {
