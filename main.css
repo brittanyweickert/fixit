@@ -138,6 +138,10 @@ input {
 	font-size: 25px;
 }
 
+.error-meme {
+    max-width: 100%;
+}
+
 /* Video Styles */
 
 .videos {
@@ -230,9 +234,14 @@ ul {
 .header {
     padding: 150px;
 }
-.error-meme {
-    max-width: 100%;
+
+input {
+    margin: 10px;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: space-between;
 }
+
 /* Go to Top Button */
 
 #topBtn {
@@ -300,7 +309,7 @@ ul {
 
 /* Responsiveness */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .wrapper {
         grid-template-areas:
         "header"
