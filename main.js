@@ -19,7 +19,7 @@ function handleFormSubmit() {
 }
 
 function getYouTubeVideos(searchTerm, resultsMax) {
-    const apiKey = 'AIzaSyCmJ3sYrd9ZvBGbYJumNlbUlFLwzI-NaAs';
+    const apiKey = 'AIzaSyDvbc1MfwfMdRAh4Jq2hLcgZ8yKPbDbtNY';
     const youTubeApiUrl = 'https://www.googleapis.com/youtube/v3/search';
     const params = {
         key: apiKey,
@@ -103,7 +103,6 @@ function getMapData(coords) {
         }
     })
         .then(res => {
-            console.log(res)
             initMap(res, loc)
         })
         .catch(err => {
