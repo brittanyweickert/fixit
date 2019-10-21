@@ -150,7 +150,7 @@ function displayResultsInfo(venues) {
         let long = shortPath.location.lng;
         let addressInfo = shortPath.location.formattedAddress[0] + ', ' + shortPath.location.formattedAddress[1] + ', ' + shortPath.location.formattedAddress[2]
         $('#map-info-list').append(`<li>
-                <h4 class="mapHeader"><a target="_blank" href="http://maps.google.com/maps?q=${shortPath.name}&ll=${lat},${long}&z=17">${shortPath.name}</a></h4>               
+                <h4 class="mapHeader"><a target="_blank" href="http://maps.google.com/maps?q=${shortPath.name}+${addressInfo}&ll=${lat},${long}&z=17">${shortPath.name}</a></h4>               
                 <p class="mapInfo">${addressInfo}</p>
             </li>
         `)
