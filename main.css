@@ -135,7 +135,8 @@ input {
 	background-color: #7863AE;
 	padding: 12px 15px;
 	outline: none;
-	font-size: 25px;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .error-meme {
