@@ -246,7 +246,7 @@ input {
 /* Go to Top Button */
 
 #topBtn {
-    display: block; 
+    display: none; 
     position: fixed;
     bottom: 20px; 
     right: 30px; 
