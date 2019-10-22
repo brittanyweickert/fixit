@@ -122,7 +122,9 @@ h3 {
 .error {
     color: red;
 }
+
 /* map Styles */
+
 .map {
     max-height: 100%;
     overflow: auto;
@@ -206,6 +208,7 @@ input {
     background-color: rgba(17, 17, 18, 0.386);
     padding: 12px 100px 12px 20px;
     font-size: 25px;
+    width: 340px;
 } input::placeholder {
         color: rgba(238, 235, 235, 0.934);
         font-weight: 300;
@@ -267,7 +270,9 @@ input {
     text-transform: uppercase;
     color: black;
 }
-    
+#footer {
+    background-color: rgba(47, 47, 51, 0.2);
+}
 .footer .copyright {
     left: 0;
     bottom: 0;
