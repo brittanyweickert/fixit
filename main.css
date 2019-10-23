@@ -29,6 +29,7 @@
 .header {
     background: url(images/bg2.jpg) center center no-repeat fixed;
     background-size: cover;
+    height: 100vh;
 }
 
 .header, .footer {
@@ -82,6 +83,7 @@ font-size: 7px;
 input {
     width: 280px;
     font-size: 12px;
+    display: block;
 }
 
 .ytHeader {
@@ -130,13 +132,14 @@ h3 {
     overflow: auto;
 }
     
-    #map {
+#map {
+    min-height: 320px;    
     height: 40%;
-  }
+}
 
 .mapHeader {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
 }
     
@@ -293,13 +296,13 @@ input {
 .videos     {grid-area: videos;}
     
 .wrapper {
-    display: grid;
-    grid-template-areas: 
-        "header header header"
-        "videos videos map"
-        "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100vh 1fr 20px;
+    grid-template-areas:
+    "header"
+    "videos"
+    "map"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh auto auto 4px;
 }
     
 .box {
@@ -325,6 +328,10 @@ input {
         "footer";
         grid-template-columns: 100%;
         grid-template-rows: 100vh auto auto 4px;
+    }
+
+    .mapHeader{
+        font-size: 20px;
     }
 
     input {
@@ -371,7 +378,7 @@ input {
     
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 950px) {
 
     /* grid */
     
@@ -411,5 +418,8 @@ input {
         display: inline-flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .tooltip{
+        margin-left: 9px;
     }
 }
