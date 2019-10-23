@@ -228,7 +228,7 @@ input {
     font-size: 12px;
     cursor: pointer;
     text-align: center;
-    max-width: 114px;
+    max-width: 84px;
 }
     
 .error-meme {
@@ -321,6 +321,9 @@ input {
 @media screen and (min-width: 230px) {
     input {
         width: 200px;
+    }
+    .submitButton {
+        max-width: 114px;
     }
 }
 
