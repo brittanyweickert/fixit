@@ -211,7 +211,7 @@ input {
     background-color: rgba(17, 17, 18, 0.386);
     padding: 12px 60px 12px 20px;
     font-size: 12px;
-    width: 200px;
+    width: 150px;
     margin-bottom: 3px;
 } input::placeholder {
         color: rgba(238, 235, 235, 0.934);
@@ -318,6 +318,11 @@ input {
         
 /* Responsiveness */
 
+@media screen and (min-width: 230px) {
+    input {
+        width: 200px;
+    }
+}
 
 @media screen and (min-width: 450px) {
     .wrapper {
