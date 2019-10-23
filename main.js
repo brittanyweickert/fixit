@@ -67,7 +67,7 @@ const googleApiKey = 'AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4'
 //geo coding //////
 
 function getLatLong(zip) {
-    smoothScroll(document.getElementById('map'))
+    smoothScroll(document.getElementById('map-window'))
     const url = `https://maps.googleapis.com/maps/api/geocode/json?components=postal_code:${zip}
     &key=${googleApiKey}`
     fetch(url).then(response => {
