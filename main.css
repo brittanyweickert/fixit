@@ -206,9 +206,10 @@ input {
     border: 3px #7863AE solid;
     border-radius: 10px;
     background-color: rgba(17, 17, 18, 0.386);
-    padding: 12px 100px 12px 20px;
-    font-size: 25px;
-    width: 340px;
+    padding: 12px 60px 12px 20px;
+    font-size: 12px;
+    width: 200px;
+    margin-bottom: 3px;
 } input::placeholder {
         color: rgba(238, 235, 235, 0.934);
         font-weight: 300;
@@ -221,7 +222,7 @@ input {
     background-color: #7863AE;
     padding: 12px 15px;
     outline: none;
-    font-size: 25px;
+    font-size: 12px;
     cursor: pointer;
     text-align: center;
     max-width: 114px;
@@ -311,11 +312,7 @@ input {
 .videos, .map {
     margin: 15px 20px 10px 20px;
 }
-    
-.header {
-    padding: 150px;
-}
-    
+        
 /* Responsiveness */
 
 
@@ -330,6 +327,10 @@ input {
         grid-template-rows: 100vh auto auto 4px;
     }
 
+    input {
+        padding: 12px 100px 12px 20px;
+    }
+
     input, .submitButton {
         margin-bottom: 10px;
         padding: 10px;
@@ -338,6 +339,8 @@ input {
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        font-size: 24px;
+        width: 340px;
     }
     .submitButton{
         justify-content: center;
@@ -365,6 +368,7 @@ input {
     #mapInfo {
         min-height: 400px;
     }
+    
 }
 
 @media screen and (min-width: 900px) {
