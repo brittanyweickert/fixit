@@ -1,62 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fix It API</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
     <link rel="shortcut icon" href="images/favicon.ico" />
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-</head>
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <header class="box header">
-            <h1 class="headLine">Oh crap, my phone broke.</h1>
-            <h2 class="subHeadLine">Show me how to fix it.</h2>
-                <form id="search-form">
-                    <input id="videos-search-field" type="text" name="searchfield" placeholder="e.g. iphone XS"
-                        autofocus required spellcheck="true" aria-label="searchfield">
-                    <input id="zip" type="text" pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$" name="zipcode"
-                        placeholder="zipcode" required aria-label="zipcode input">
-                    <input type="submit" class="submitButton" aria-label="submit">
-                </form>
-                <div class="tooltip"><i class="fa fa-info-circle fa-1.9x"></i>
-                    <span class="tooltiptext">Oh no! You "accidently" dropped your smartphone. (We won't tell anyone how
-                    it happened, if you don't) Enter the smartphone model and your zip code to be given videos on
-                    how to fix it yourself. Back to reality? We also show you the info for your local repair
-                    shops.</span>
-                </div>
-            </header>
-        <section class="box map hidden" id="map-window">
-            <h3 class="center">Go to the Pro's
-                <i class="icon ion-md-pin"></i>
-            </h3>
-            <div id="map"></div>
-            <div id="mapInfo">
-                <ul id="map-info-list"></ul>
-            </div>
-        </section>
-        <section class="box videos hidden" id="videos">
-            <h3 class="center">Do it yourself
-                <i class="icon ion-logo-youtube"></i>
-            </h3>
-            <ul id="videos-list"></ul>
-        </section>
-        <a href="#top" id="topBtn" class="button"><i class="fa fa-angle-double-up fa-4x" aria-hidden="true"></i></a>
+      <header class="box header">
+        <h1 class="headLine">Oh crap, my phone broke.</h1>
+        <h2 class="subHeadLine">Show me how to fix it.</h2>
+        <form id="search-form">
+          <input
+            id="videos-search-field"
+            type="text"
+            name="searchfield"
+            placeholder="e.g. iphone XS"
+            autofocus
+            required
+            spellcheck="true"
+            aria-label="searchfield"
+          />
+          <input
+            id="zip"
+            type="text"
+            pattern="^\s*?\d{5}(?:[-\s]\d{4})?\s*?$"
+            name="zipcode"
+            placeholder="zipcode"
+            required
+            aria-label="zipcode input"
+          />
+          <input type="submit" class="submitButton" aria-label="submit" />
+        </form>
+        <div class="tooltip">
+          <i class="fa fa-info-circle fa-1.9x"></i>
+          <span class="tooltiptext"
+            >Oh no! You "accidently" dropped your smartphone. (We won't tell
+            anyone how it happened, if you don't) Enter the smartphone model and
+            your zip code to be given videos on how to fix it yourself. Back to
+            reality? We also show you the info for your local repair
+            shops.</span
+          >
+        </div>
+      </header>
+      <section class="box map hidden" id="map-window">
+        <h3 class="center">
+          Go to the Pro's
+          <i class="icon ion-md-pin"></i>
+        </h3>
+        <div id="map"></div>
+        <div id="mapInfo">
+          <ul id="map-info-list"></ul>
+        </div>
+      </section>
+      <section class="box videos hidden" id="videos">
+        <h3 class="center">
+          Do it yourself
+          <i class="icon ion-logo-youtube"></i>
+        </h3>
+        <ul id="videos-list"></ul>
+      </section>
+      <a href="#top" id="topBtn" class="button"
+        ><i class="fa fa-angle-double-up fa-4x" aria-hidden="true"></i
+      ></a>
 
-        <footer class="box footer hidden" id ="footer">
-            <p class="copyright">Design: <a href="https://brittanyweickert.dev" target="_blank">BRITTANY WEICKERT</a> &
-                <a href="https://r-kadel.github.io/Portfolio/" target="_blank">RYAN KADEL</a>.</p>
-        </footer>
+      <footer class="box footer hidden" id="footer">
+        <p class="copyright">
+          Design:
+          <a href="https://brittanyweickert.dev" target="_blank"
+            >BRITTANY WEICKERT</a
+          >
+          &
+          <a href="https://r-kadel.github.io/Portfolio/" target="_blank"
+            >RYAN KADEL</a
+          >.
+        </p>
+      </footer>
     </div>
     <script src="https://use.fontawesome.com/c0fbee99e0.js"></script>
-    <script type='text/javascript' src='config.js'></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4" defer></script>
+    <script type="text/javascript" src="key.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBw8VZKCuk7juM1LnKIBcB1aKiJXpmTn4"
+      defer
+    ></script>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
