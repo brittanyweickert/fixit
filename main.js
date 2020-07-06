@@ -62,7 +62,7 @@ function displayYouTubeResults(responseJson) {
 
 
 ////////////////////////////////Maps API section////////////////////
-const googleApiKey = 'AIzaSyDjZD9N-YPzJGaGMIYvd33a2KLt7AwhUd8'
+const googleApiKey = 'AIzaSyBChpWyt5u8OGWHCMg3MlGFL2Oed32WDis'
 
 //geo coding //////
 
